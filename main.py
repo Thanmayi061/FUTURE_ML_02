@@ -8,11 +8,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-# Download stopwords
+# -------------------------------
+# DOWNLOAD STOPWORDS
+# -------------------------------
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 
-# Load dataset
+# -------------------------------
+# LOAD DATASET
+# -------------------------------
 df = pd.read_csv("tickets.csv")
 
 # -------------------------------
@@ -46,32 +50,40 @@ model = MultinomialNB()
 model.fit(X_train, y_train)
 
 # -------------------------------
-# PREDICTION & EVALUATION
+# PREDICTIONS
 # -------------------------------
 y_pred = model.predict(X_test)
 
+# -------------------------------
+# EVALUATION
+# -------------------------------
+print("\n📊 Model Evaluation:")
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 # -------------------------------
-# GRAPH 1: BAR CHART
+# LINE GRAPH (USING PREDICTIONS)
 # -------------------------------
-category_counts = df["category"].value_counts()
+category_map = {
+    "Technical": 1,
+    "Billing": 2,
+    "Complaint": 3
+}
+
+# Convert predictions to numbers
+pred_df = pd.DataFrame({"predicted": y_pred})
+pred_df["category_num"] = pred_df["predicted"].map(category_map)
 
 plt.figure()
-category_counts.plot(kind='bar')
-plt.title("Ticket Category Distribution")
-plt.xlabel("Category")
-plt.ylabel("Count")
-plt.show()
+plt.plot(pred_df.index, pred_df["category_num"], marker='o')
 
-# -------------------------------
-# GRAPH 2: PIE CHART
-# -------------------------------
-plt.figure()
-category_counts.plot(kind='pie', autopct='%1.1f%%')
-plt.title("Category Distribution")
-plt.ylabel("")
+plt.title("Predicted Ticket Categories (Line Graph)")
+plt.xlabel("Test Sample Index")
+plt.ylabel("Category")
+
+plt.yticks([1, 2, 3], ["Technical", "Billing", "Complaint"])
+
+plt.grid()
 plt.show()
 
 # -------------------------------
