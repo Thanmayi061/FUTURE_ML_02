@@ -1,0 +1,61 @@
+text,category
+"My internet is not working",Technical
+"App crashes when I open it",Technical
+"Unable to login to my account",Technical
+"Website is not loading properly",Technical
+"System showing error while processing",Technical
+"Payment gateway not responding",Technical
+"Server is down again",Technical
+"Application freezes frequently",Technical
+"Facing issue with software installation",Technical
+"Error while uploading files",Technical
+"I was charged twice",Billing
+"I need a refund immediately",Billing
+"Incorrect bill generated",Billing
+"Payment deducted but order not placed",Billing
+"Refund not processed yet",Billing
+"Extra charges applied to my account",Billing
+"Billing amount is incorrect",Billing
+"Need invoice copy",Billing
+"Payment failed but money deducted",Billing
+"Subscription charged automatically",Billing
+"Very poor service experience",Complaint
+"Support team is not responding",Complaint
+"Late response from your side",Complaint
+"Very disappointed with service",Complaint
+"No proper assistance provided",Complaint
+"Delay in resolving issue",Complaint
+"Customer service is very slow",Complaint
+"Bad experience with support team",Complaint
+"Unprofessional behavior from staff",Complaint
+"No response after multiple requests",Complaint
+"Internet speed is very slow",Technical
+"App not working after update",Technical
+"Login page not opening",Technical
+"Unable to reset password",Technical
+"Error in mobile application",Technical
+"Payment stuck during checkout",Billing
+"Refund taking too long",Billing
+"Charged for cancelled order",Billing
+"Wrong billing details",Billing
+"Invoice not generated",Billing
+"Service quality is bad",Complaint
+"Not satisfied with support",Complaint
+"Response time is too high",Complaint
+"Complaint not resolved yet",Complaint
+"Repeated issues not fixed",Complaint
+"Technical glitch in app",Technical
+"Unable to connect to server",Technical
+"Bug in application",Technical
+"System crashing frequently",Technical
+"Feature not working properly",Technical
+"Billing issue again",Billing
+"Refund request ignored",Billing
+"Duplicate payment problem",Billing
+"Unexpected charges added",Billing
+"Transaction failed error",Billing
+"Complaint regarding delay",Complaint
+"Support not helpful",Complaint
+"Service delay unacceptable",Complaint
+"Very rude support staff",Complaint
+"No update on issue",Complaint
